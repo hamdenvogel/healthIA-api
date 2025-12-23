@@ -1,6 +1,6 @@
 # 🏥 HealthIA - Assistente Inteligente de Diagnóstico
 
-**HealthIA** é um sistema inteligente de auxílio ao diagnóstico médico que utiliza **Processamento de Linguagem Natural (NLP)** e **Aprendizado de Máquina (XGBoost)** para prever diagnósticos com base em sintomas relatados.
+**HealthIA** é um sistema inteligente de auxílio ao diagnóstico médico que utiliza **Processamento de Linguagem Natural (NLP)** e **Aprendizado de Máquina (XGBoost)** para prever diagnósticos com base em sintomas informados.
 
 ---
 
@@ -8,11 +8,11 @@
 
 > **IMPORTANTE: ESTE SOFTWARE É DESTINADO EXCLUSIVAMENTE PARA FINS EDUCACIONAIS E DE PESQUISA.**
 >
-> Esta aplicação **NÃO** tem a finalidade de substituir o diagnóstico, tratamento ou aconselhamento médico profissional. As predições geradas por este sistema são baseadas em modelos de aprendizado de máquina e não devem ser interpretadas como diagnósticos médicos definitivos.
+> Esta aplicação **NÃO** tem a finalidade de substituir o diagnóstico, tratamento ou aconselhamento médico profissional. As predições geradas por este sistema são baseadas em modelos de aprendizado de máquina e podem conter imprecisões.
 >
-> **Nunca** utilize este programa como substituto para uma consulta médica presencial com um profissional de saúde qualificado. Em caso de sintomas ou problemas de saúde, sempre procure orientação de um médico ou outro profissional de saúde licenciado.
+> **Nunca** utilize este programa como substituto para uma consulta médica presencial com um profissional de saúde qualificado. Em caso de sintomas ou problemas de saúde, sempre procure orientação médica adequada.
 >
-> **O uso deste software é por sua conta e risco.** Os desenvolvedores e mantenedores deste projeto não assumem qualquer responsabilidade por decisões tomadas com base nas informações fornecidas por esta aplicação.
+> **O uso deste software é por sua conta e risco.** Os desenvolvedores e mantenedores deste projeto não assumem qualquer responsabilidade por decisões tomadas com base nas informações fornecidas por esta ferramenta.
 
 ---
 
@@ -115,7 +115,36 @@ A documentação interativa (Swagger) pode ser acessada em: `http://127.0.0.1:80
 Predição dos 3 diagnósticos mais prováveis.
 
 - **Parâmetro**: `sintomas` (string separada por vírgula, mínimo 4 sintomas).
-- **Exemplo**: `http://127.0.0.1:8000/predict/?sintomas=febre,dor de cabeça,tosse,coriza`
+- **Exemplo de Requisição**: 
+  ```
+  http://127.0.0.1:8000/predict/?sintomas=sono, dor nas costas, dor no braço, dor ao respirar
+  ```
+
+- **Exemplo de Resposta**:
+  ```json
+  {
+      "sintomas": [
+          "sono",
+          "dor nas costas",
+          "dor no braço",
+          "dor ao respirar"
+      ],
+      "diagnosticos_provaveis": [
+          {
+              "diagnostico": "covid_19",
+              "probabilidade": 0.7631059885025024
+          },
+          {
+              "diagnostico": "dengue",
+              "probabilidade": 0.08929277211427689
+          },
+          {
+              "diagnostico": "doenca_do_refluxo_gastroesofagico",
+              "probabilidade": 0.07415275275707245
+          }
+      ]
+  }
+  ```
 
 #### `GET /predict-lista/`
 
@@ -144,4 +173,4 @@ Para atualizar ou treinar o modelo com novos dados:
 
 ## 📄 Licença e Uso Responsável
 
-Este projeto é uma ferramenta de auxílio educacional e **não substitui a consulta com um profissional de saúde qualificado**. Ao utilizar este software, você reconhece e aceita os termos do aviso legal descrito acima.
+Este projeto é uma ferramenta de auxílio educacional e **não substitui a consulta com um profissional de saúde qualificado**. Ao utilizar este software, você reconhece e aceita os termos do aviso legal acima.
