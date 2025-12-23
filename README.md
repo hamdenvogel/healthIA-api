@@ -1,6 +1,18 @@
 # 🏥 HealthIA - Assistente Inteligente de Diagnóstico
 
-**HealthIA** é um sistema inteligente de auxílio ao diagnóstico médico que utiliza **Processamento de Linguagem Natural (NLP)** e **Aprendizado de Máquina (XGBoost)** para prever diagnósticos prováveis com base em sintomas descritos.
+**HealthIA** é um sistema inteligente de auxílio ao diagnóstico médico que utiliza **Processamento de Linguagem Natural (NLP)** e **Aprendizado de Máquina (XGBoost)** para prever diagnósticos com base em sintomas relatados.
+
+---
+
+## ⚠️ Aviso Legal e Isenção de Responsabilidade
+
+> **IMPORTANTE: ESTE SOFTWARE É DESTINADO EXCLUSIVAMENTE PARA FINS EDUCACIONAIS E DE PESQUISA.**
+>
+> Esta aplicação **NÃO** tem a finalidade de substituir o diagnóstico, tratamento ou aconselhamento médico profissional. As predições geradas por este sistema são baseadas em modelos de aprendizado de máquina e não devem ser interpretadas como diagnósticos médicos definitivos.
+>
+> **Nunca** utilize este programa como substituto para uma consulta médica presencial com um profissional de saúde qualificado. Em caso de sintomas ou problemas de saúde, sempre procure orientação de um médico ou outro profissional de saúde licenciado.
+>
+> **O uso deste software é por sua conta e risco.** Os desenvolvedores e mantenedores deste projeto não assumem qualquer responsabilidade por decisões tomadas com base nas informações fornecidas por esta aplicação.
 
 ---
 
@@ -130,4 +142,6 @@ Para atualizar ou treinar o modelo com novos dados:
 
 ---
 
-_Este projeto é uma ferramenta de auxílio e não substitui a consulta com um profissional de saúde qualificado._
+## 📄 Licença e Uso Responsável
+
+Este projeto é uma ferramenta de auxílio educacional e **não substitui a consulta com um profissional de saúde qualificado**. Ao utilizar este software, você reconhece e aceita os termos do aviso legal descrito acima.
